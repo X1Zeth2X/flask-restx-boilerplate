@@ -11,8 +11,6 @@ from flask_migrate import Migrate
 from app import create_app, db
 
 
-# Import blueprints
-
 app = create_app(os.getenv("FLASK_CONFIG") or "prod")
 migrate = Migrate(app, db)
 
