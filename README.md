@@ -43,13 +43,15 @@ export FLASK_APP=giya
 
 # configs: prod, test, dev
 export FLASK_CONFIG=dev
-...
+
+# Another way of assign environment variables is:
+FLASK_APP=giya
+FLASK_CONFIG=dev
+
+# Read more at https://github.com/theskumar/python-dotenv
 ```
 
 ```sh
-# Source your .env file
-$ source /path/to/.env
-
 # Enter the virtualenv
 $ pipenv shell
 
