@@ -35,12 +35,10 @@ $ pipenv install
 ```
 
 ## Running
-Please note that you will need to specify `FLASK_APP` so that Flask CLI knows what to run.
-
-Usually you create `.env` and source from there.
+Please specify your app's environment variables in a `.env` file, otherwise Flask CLI wouldn't find your app.
 
 ```sh
-# .env file
+# .env file example
 export FLASK_APP=giya
 
 # configs: prod, test, dev
