@@ -2,7 +2,7 @@ from flask_restx import Namespace, fields
 from re import compile
 
 # Basic Email REGEX
-EMAIl_REGEX = re.compile(r"[^@]+@[^@]+\.[^@]+")
+EMAIl_REGEX = compile(r"[^@]+@[^@]+\.[^@]+")
 
 
 class AuthDto:
