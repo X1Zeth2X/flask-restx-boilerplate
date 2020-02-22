@@ -46,7 +46,7 @@ export FLASK_APP=giya
 # configs: prod, test, dev
 export FLASK_CONFIG=dev
 
-# Another way of assign environment variables is:
+# Another way of assigning environment variables is:
 FLASK_APP=giya
 FLASK_CONFIG=dev
 
@@ -59,4 +59,14 @@ $ pipenv shell
 
 # Run the app
 $ flask run
+```
+
+## Unit testing
+
+```sh
+# Unit testing
+$ flask test
+
+# Run specific unit test(s)
+$ flask test tests.test_auth_api tests.test_user_model ...
 ```
