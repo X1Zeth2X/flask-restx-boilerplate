@@ -8,7 +8,7 @@ from config import basedir
 
 class TestDevelopmentConfig(unittest.TestCase):
     def test_app_is_development(self):
-        app = create_app("dev")
+        app = create_app("development")
 
         self.assertFalse(app.config["SECRET_KEY"] == "GahNooSlasHLinUcks")
         self.assertTrue(app.config["DEBUG"])
@@ -21,6 +21,6 @@ class TestDevelopmentConfig(unittest.TestCase):
 
 class TestProductionConfig(unittest.TestCase):
     def test_app_is_production(self):
-        app = create_app("prod")
+        app = create_app("production")
 
         self.assertTrue(app.config["DEBUG"] is False)
