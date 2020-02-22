@@ -36,3 +36,7 @@ class TestUserBlueprint(BaseTestCase):
         self.assertTrue(user_resp.status)
         self.assertEquals(user_resp.status_code, 200)
         self.assertEquals(user_data["user"]["username"], username)
+
+        # Test a 404 request
+        user_404_resp = get_user_data(self, access_token, "non.existent")
+        self.assertEquals(user_404_resp.status_code, 404)
