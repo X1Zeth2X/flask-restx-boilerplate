@@ -1,4 +1,6 @@
-from app.utils import err_resp, message
+from flask import current_app
+
+from app.utils import err_resp, message, internal_err_resp
 from app.models.user import User
 
 
@@ -13,8 +15,13 @@ class UserService:
 
         from .utils import load_data
 
-        user_data = load_data(user)
+        try:
+            user_data = load_data(user)
 
-        resp = message(True, "User data sent")
-        resp["user"] = user_data
-        return resp, 200
+            resp = message(True, "User data sent")
+            resp["user"] = user_data
+            return resp, 200
+
+        except Exception as error:
+            current_app.logger.error(error)
+            return internal_err_resp()

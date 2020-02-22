@@ -42,8 +42,9 @@ class AuthService:
                 "Failed to log in, password may be incorrect.", "password_invalid", 401
             )
 
-        except expression as identifier:
-            pass
+        except Exception as error:
+            current_app.logger.error(error)
+            return internal_err_resp()
 
     @staticmethod
     def register(data):
