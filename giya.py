@@ -14,7 +14,7 @@ from app import create_app, db
 from app.models.user import User, Role, Permission
 
 
-app = create_app(os.getenv("FLASK_CONFIG") or "prod")
+app = create_app(os.getenv("FLASK_CONFIG") or "default")
 migrate = Migrate(app, db)
 
 
