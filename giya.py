@@ -11,6 +11,8 @@ if os.path.exists(dotenv_path):
 import click
 from flask_migrate import Migrate
 from app import create_app, db
+
+# Import models
 from app.models.user import User, Role, Permission
 
 
@@ -21,10 +23,6 @@ migrate = Migrate(app, db)
 @app.shell_context_processor
 def make_shell_context():
     return dict(db=db, User=User, Role=Role, Permission=Permission)
-
-
-#    return dict(db=db, User=User, Follow=Follow, Role=Role,
-#                Permission=Permission, Post=Post, Comment=Comment)
 
 
 @app.cli.command()
