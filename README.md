@@ -10,6 +10,7 @@ doing too much, is lacking, or it simply doesn't fit my needs.
 
 # Features
 
+* Full featured framework for fast, easy, and documented API with [Flask-RESTX](https://github.com/python-restx/flask-restx.git)
 * JSON Web Token Authentication with [Flask-JWT-Extended](https://flask-jwt-extended.readthedocs.io/en/stable/)
 * Swagger Documentation (Part of Flask-RESTX).
 * Unit Testing.
@@ -50,7 +51,8 @@ Commands:
 This boilerplate uses `SQLite` as its database, make sure you have it installed.
 `Pipenv` is recommended to help manage the dependencies and virtualenv.
 
-You can also use other DBs like `PostGreSQL`, make sure you have it setup and update your `DATABASE_URL` in your configs.
+You can also use other DBs like `PostGreSQL`, make sure you have it setup and update your `DATABASE_URL` in your configs. Read more at []
+Read more at [Flask-SQLAlchemy's](https://flask-sqlalchemy.palletsprojects.com/en/2.x/) documentations.
 
 It uses [Black](https://github.com/psf/black) for code styling/formatting.
 
