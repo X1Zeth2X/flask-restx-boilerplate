@@ -42,6 +42,11 @@ class ProductionConfig(Config):
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 
-config_by_name = dict(dev=DevelopmentConfig, test=TestingConfig, prod=ProductionConfig)
+config_by_name = dict(
+    development=DevelopmentConfig,
+    testing=TestingConfig,
+    production=ProductionConfig,
+    default=DevelopmentConfig,
+)
 
 key = Config.SECRET_KEY
