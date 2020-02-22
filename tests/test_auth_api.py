@@ -6,6 +6,7 @@ from tests.utils.common import register_user, login_user
 
 class TestAuthBlueprint(BaseTestCase):
     def test_register_and_login(self):
+        """ Test Auth API registration and login """
         # Test registration
         data = dict(
             email="test@user.com",
