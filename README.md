@@ -21,6 +21,8 @@ doing too much, is lacking, or it simply doesn't fit my needs.
 This boilerplate uses `SQLite` as its database, make sure you have it installed.
 `Pipenv` is recommended to help manage the dependencies and virtualenv.
 
+You can also use other DBs like `PostGreSQL`, make sure you have it setup and update your `DATABASE_URL` in your configs.
+
 It uses [Black](https://github.com/psf/black) for code styling/formatting.
 
 # Usage
