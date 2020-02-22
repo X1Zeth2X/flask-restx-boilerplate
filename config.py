@@ -48,5 +48,3 @@ config_by_name = dict(
     production=ProductionConfig,
     default=DevelopmentConfig,
 )
-
-key = Config.SECRET_KEY
