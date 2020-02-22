@@ -5,7 +5,8 @@ from app.utils import validation_error
 
 # Auth modules
 from .service import AuthService
-from .utils import AuthDto, LoginSchema, RegisterSchema
+from .dto import AuthDto
+from .utils import LoginSchema, RegisterSchema
 
 api = AuthDto.api
 auth_success = AuthDto.auth_success
