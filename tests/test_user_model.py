@@ -2,7 +2,7 @@ from app import db
 from app.models.user import User
 from app.models.schemas import UserSchema
 
-from tests.base import BaseTestCase
+from tests.utils.base import BaseTestCase
 
 
 class TestUserModel(BaseTestCase):
