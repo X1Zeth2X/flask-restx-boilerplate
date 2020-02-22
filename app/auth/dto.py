@@ -5,7 +5,7 @@ class AuthDto:
     api = Namespace("auth", description="Authenticate and receive tokens.")
 
     user_obj = api.model(
-        "user",
+        "User object",
         {
             "email": fields.String,
             "name": fields.String,
@@ -16,7 +16,7 @@ class AuthDto:
     )
 
     auth_login = api.model(
-        "login_data",
+        "Login data",
         {
             "email": fields.String(required=True),
             "password": fields.String(required=True),
@@ -24,7 +24,7 @@ class AuthDto:
     )
 
     auth_register = api.model(
-        "register_data",
+        "Registration data",
         {
             "email": fields.String(required=True),
             "username": fields.String(required=True),
@@ -35,7 +35,7 @@ class AuthDto:
     )
 
     auth_success = api.model(
-        "Response",
+        "Auth success response",
         {
             "status": fields.Boolean,
             "message": fields.String,

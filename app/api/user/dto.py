@@ -5,7 +5,7 @@ class UserDto:
 
     api = Namespace("user", description="User related operations.")
     user = api.model(
-        "user",
+        "User object",
         {
             "email": fields.String,
             "name": fields.String,
@@ -16,7 +16,7 @@ class UserDto:
     )
 
     data_resp = api.model(
-        "Response",
+        "User Data Response",
         {
             "status": fields.Boolean,
             "message": fields.String,
