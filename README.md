@@ -1,4 +1,4 @@
-# Flask RestX Boilerplate
+# Giya
 
 An awesome REST boilerplate that uses Flask-RESTX (formerly Flask-RESTPlus).
 It has the usual API features to get you started and off the ground,
@@ -6,6 +6,7 @@ it's also designed to be easily scalable and extendable.
 
 I wrote this boilerplate because I found that a lot of Flask REST boilerplates are either
 doing too much, is lacking, or it simply doesn't fit my needs.
+
 
 # Features
 
@@ -15,6 +16,34 @@ doing too much, is lacking, or it simply doesn't fit my needs.
 * Database ORM with [Flask-SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/en/2.x/)
 * Database Migrations using [Flask-Migrate](https://github.com/miguelgrinberg/flask-migrate)
 * Object serialization/deserialization with [Flask-Marshmallow](https://flask-marshmallow.readthedocs.io/en/latest/)
+
+
+## Flask CLI help command output:
+```sh
+Usage: flask [OPTIONS] COMMAND [ARGS]...
+
+  A general utility script for Flask applications.
+
+  Provides commands from Flask, extensions, and the application. Loads the
+  application defined in the FLASK_APP environment variable, or from a
+  wsgi.py file. Setting the FLASK_ENV environment variable to 'development'
+  will enable debug mode.
+
+    $ export FLASK_APP=hello.py
+    $ export FLASK_ENV=development
+    $ flask run
+
+Options:
+  --version  Show the flask version
+  --help     Show this message and exit.
+
+Commands:
+  db      Perform database migrations.
+  routes  Show the routes for the app.
+  run     Run a development server.
+  shell   Run a shell in the app context.
+  test    Run unit tests
+```
 
 # Pre-requisites
 
@@ -62,6 +91,7 @@ $ flask run
 ```
 
 ## Unit testing
+Giya has already some unit tests written, we encourage adding more as you add more features.
 
 ```sh
 # Unit testing
