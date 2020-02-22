@@ -10,14 +10,14 @@ doing too much, is lacking, or it simply doesn't fit my needs.
 
 # Features
 
-* Full featured framework for fast, easy, and documented API with [Flask-RESTX](https://github.com/python-restx/flask-restx.git)
+* Full featured framework for fast, easy, and documented API with [Flask-RESTX](https://flask-restx.readthedocs.io/en/latest/)
 * JSON Web Token Authentication with [Flask-JWT-Extended](https://flask-jwt-extended.readthedocs.io/en/stable/)
 * Swagger Documentation (Part of Flask-RESTX).
 * Unit Testing.
 * Database ORM with [Flask-SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/en/2.x/)
 * Database Migrations using [Flask-Migrate](https://github.com/miguelgrinberg/flask-migrate)
 * Object serialization/deserialization with [Flask-Marshmallow](https://flask-marshmallow.readthedocs.io/en/latest/)
-
+* Data validations with Marshmallow [Marshmallow](https://marshmallow.readthedocs.io/en/stable/quickstart.html#validation)
 
 ## Flask CLI help command output:
 ```sh
