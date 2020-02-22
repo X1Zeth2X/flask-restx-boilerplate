@@ -76,7 +76,6 @@ class Role(Model):
 class User(Model):
     """ User model for storing user related data """
 
-    __tablename__ = "users"
     id = Column(db.Integer, primary_key=True)
     email = Column(db.String(64), unique=True, index=True)
     username = Column(db.String(15), unique=True, index=True)
