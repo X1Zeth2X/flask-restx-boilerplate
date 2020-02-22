@@ -1,11 +1,17 @@
-from flask import request
+from flask import request, abort
 from flask_restx import Resource
 
+from app.utils import validation_error
+
+# Auth modules
 from .service import AuthService
-from .utils import AuthDto
+from .utils import AuthDto, LoginSchema, RegisterSchema
 
 api = AuthDto.api
 auth_success = AuthDto.auth_success
+
+login_schema = LoginSchema()
+register_schema = RegisterSchema()
 
 
 @api.route("/login")
@@ -20,6 +26,7 @@ class AuthLogin(Resource):
         "Auth login",
         responses={
             200: ("Logged in", auth_success),
+            400: "Validations failed.",
             403: "Incorrect password or incomplete credentials.",
             404: "Email does not match any account.",
         },
@@ -29,6 +36,11 @@ class AuthLogin(Resource):
         """ Login using email and password """
         # Grab the json data
         login_data = request.get_json()
+
+        # Validate data
+        if (errors := login_schema.validate(login_data)) :
+            return validation_error(False, errors), 400
+
         return AuthService.login(login_data)
 
 
@@ -44,8 +56,7 @@ class AuthRegister(Resource):
         "Auth registration",
         responses={
             201: ("Successfully registered user.", auth_success),
-            400: "Bad request, malformed data.",
-            403: "Validations failed.",
+            400: "Malformed data or validations failed.",
         },
     )
     @api.expect(auth_register, validate=True)
@@ -53,5 +64,9 @@ class AuthRegister(Resource):
         """ User registration """
         # Grab the json data
         register_data = request.get_json()
-        print(register_data)
-        pass
+
+        # Validate data
+        if (errors := register_schema.validate(register_data)) :
+            return validation_error(False, errors), 400
+
+        return AuthService.register(register_data)
