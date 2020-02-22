@@ -30,7 +30,7 @@ class AuthDto:
             "username": fields.String(required=True),
             # Name is optional
             "name": fields.String,
-            "password": fields.String,
+            "password": fields.String(required=True),
         },
     )
 
