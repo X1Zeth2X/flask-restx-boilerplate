@@ -8,9 +8,7 @@ class UserService:
     @staticmethod
     def get_user_data(username):
         """ Get user data by username """
-        user = User.query.filter_by(username=username).first()
-
-        if not user:
+        if not (user := User.query.filter_by(username=username).first()):
             return err_resp("User not found!", "user_404", 404)
 
         from .utils import load_data

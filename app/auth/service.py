@@ -19,8 +19,7 @@ class AuthService:
 
         try:
             # Fetch user data
-            user = User.query.filter_by(email=email).first()
-            if not user:
+            if not (user := User.query.filter_by(email=email).first()):
                 return err_resp(
                     "The email you have entered does not match any account.",
                     "email_404",
