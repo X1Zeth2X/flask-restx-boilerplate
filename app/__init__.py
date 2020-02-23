@@ -6,7 +6,6 @@ This module:
 - Registers extensions
 """
 
-import logging
 from flask import Flask
 
 # Import extensions
