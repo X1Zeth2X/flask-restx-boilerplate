@@ -74,12 +74,12 @@ Please specify your app's environment variables in a `.env` file, otherwise Flas
 # .env file example
 export FLASK_APP=giya
 
-# configs: prod, test, dev
-export FLASK_CONFIG=dev
+# configs: production, testing, development, and default (uses DevelopmentConfig)
+export FLASK_CONFIG=development
 
 # Another way of assigning environment variables is:
 FLASK_APP=giya
-FLASK_CONFIG=dev
+FLASK_CONFIG=development
 
 # Read more at https://github.com/theskumar/python-dotenv
 ```
@@ -93,7 +93,7 @@ $ flask run
 ```
 
 ## Unit testing
-Giya has already some unit tests written, we encourage adding more as you add more features.
+Giya has already some unit tests written, we encourage adding more unit tests as you scale.
 
 ```sh
 # Unit testing
