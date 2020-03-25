@@ -43,7 +43,7 @@ class Role(Model):
                 Permission.WRITE,
                 Permission.MODERATE,
             ],
-            "Moderator": [
+            "Admin": [
                 Permission.FOLLOW,
                 Permission.COMMENT,
                 Permission.WRITE,
