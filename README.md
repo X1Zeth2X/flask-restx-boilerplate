@@ -58,6 +58,12 @@ It uses [Black](https://github.com/psf/black) for code styling/formatting.
 
 # Usage
 
+## Notes
+
+By default the `/` route is used by the `auth` blueprint.
+
+The rest of the resources are found in `/api` (This is the docs route by default, this can be changed easily).
+
 ## Installing
 ```sh
 # Clone the repo
