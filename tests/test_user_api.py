@@ -11,7 +11,7 @@ from tests.utils.common import register_user, login_user
 
 def get_user_data(self, access_token, username):
     return self.client.get(
-        f"/api/user/get/{username}",
+        f"/api/user/{username}",
         headers={"Authorization": f"Bearer {access_token}"},
         content_type="application/json",
     )
