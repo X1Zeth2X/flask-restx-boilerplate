@@ -8,7 +8,7 @@ api = UserDto.api
 data_resp = UserDto.data_resp
 
 
-@api.route("/get/<string:username>")
+@api.route("/<string:username>")
 class UserGet(Resource):
     @api.doc(
         "Get a specific user",
