@@ -1,4 +1,4 @@
-from flask import request, abort
+from flask import request
 from flask_restx import Resource
 
 from app.utils import validation_error
