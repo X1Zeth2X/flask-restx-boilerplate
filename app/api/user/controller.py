@@ -17,7 +17,7 @@ class UserGet(Resource):
             404: "User not found!",
         },
     )
-    @jwt_required
+    @jwt_required()
     def get(self, username):
         """ Get a specific user's data by their username """
         return UserService.get_user_data(username)
