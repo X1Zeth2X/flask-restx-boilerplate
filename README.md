@@ -94,6 +94,10 @@ FLASK_CONFIG=development
 # Enter the virtualenv
 $ pipenv shell
 
+# (Optional for development, recommended)
+$ flask db init # Initializes a new SQLite database.
+$ flask db migrate # Creates the tables in the database.
+
 # Run the app
 $ flask run
 ```
