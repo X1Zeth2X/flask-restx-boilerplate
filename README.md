@@ -64,7 +64,9 @@ By default the `/` route is used by the `auth` blueprint.
 
 The rest of the resources are found in `/api` (This is the docs route by default, this can be changed easily).
 
-## Installing
+**Note**: Pipenv seems to have been becoming unmaintained or unsupported, so `virtualenv` is recommended to manage your packages and Python environment, hence why `requirements.txt` has been generated.
+
+## Installing with Pipenv
 ```sh
 # Clone the repo
 $ git clone https://github.com/X1Zeth2X/flask-restx-boilerplate.git
