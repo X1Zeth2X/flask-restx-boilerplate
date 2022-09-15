@@ -30,7 +30,7 @@ Usage: flask [OPTIONS] COMMAND [ARGS]...
   wsgi.py file. Setting the FLASK_ENV environment variable to 'development'
   will enable debug mode.
 
-    $ export FLASK_APP=hello.py
+    $ export FLASK_APP=giya.py
     $ export FLASK_ENV=development
     $ flask run
 
