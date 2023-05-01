@@ -19,7 +19,7 @@ flask-marshmallow==0.14.0
 flask-migrate==3.1.0
 flask-restx==0.5.1
 flask-sqlalchemy==2.5.1
-flask==2.0.1; python_version >= '3.6'
+flask==2.3.2; python_version >= '3.6'
 greenlet==1.1.2; python_version >= '3' and platform_machine == 'aarch64' or (platform_machine == 'ppc64le' or (platform_machine == 'x86_64' or (platform_machine == 'amd64' or (platform_machine == 'AMD64' or (platform_machine == 'win32' or platform_machine == 'WIN32')))))
 itsdangerous==2.0.1; python_version >= '3.6'
 jinja2==3.0.1; python_version >= '3.6'
